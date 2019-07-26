@@ -50,3 +50,11 @@ flip-card:focus .flip-card-inner{
   color: black;
   padding:20px;
 }
+
+.backflip-click{
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    background-color: transparent;
+    z-index: 2;
+}

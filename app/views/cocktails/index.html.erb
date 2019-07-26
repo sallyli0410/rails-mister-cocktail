@@ -4,30 +4,18 @@
     <%= link_to 'Create a New Cocktail 🍸', new_cocktail_path, class: ' btn btn-ghost' %>
   </div>
 
-<!--   <div class="container">
-    <div class="row no-gutters">
-      <% @cocktails.each  do |cocktail|  %>
-      <div class="col-4">
-        <div class="card m-2 p-2">
-        <p class="text-center my-2"><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
-      </div>
-      </div>
-      <% end %>
-    </div>
-  </div> -->
-
-
   <div class="container">
     <div class="row no-gutters">
       <% @cocktails.each  do |cocktail|  %>
-      <% link_to cocktail_path(cocktail) %>
       <div class="col-4">
+
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <h3><%= cocktail.name %></h3>
             </div>
             <div class="flip-card-back">
+              <%= link_to "", cocktail_path(cocktail), class: 'backflip-click' %>
               <div class= "ingredients">
                 <h6><strong>Ingredients</strong></h6>
                   <% cocktail.doses.each do |dose| %>
