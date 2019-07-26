@@ -1,0 +1,52 @@
+.flip-card{
+  margin:10px;
+  height: 300px;
+  background: transparent;
+  perspective: 1000px;
+  border-radius: 10px;
+}
+.flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.flip-card:focus{
+  outline: 0;
+}
+.flip-card:hover .flip-card-inner,
+flip-card:focus .flip-card-inner{
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.flip-card-front{
+  background-image: url("https://media2.giphy.com/media/3o7aDcrsww5Ybp18hq/giphy.gif?cid=790b76115d3ab7043263616873be96bc&rid=giphy.gif");
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.flip-card-back{
+  background-image: url(https://media2.giphy.com/media/ctoj9GJ9GLdao/200.webp?cid=790b76115d3ac112734e494477e516ad&rid=200.webp)  !important;
+  background: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+  z-index: 1;
+  display:block;
+  justify-content: left;
+  align-items: left;
+  color: black;
+  padding:20px;
+}

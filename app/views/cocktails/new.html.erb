@@ -1,9 +1,16 @@
-<h1>Create A Cocktail 🍸</h1>
-<%= simple_form_for @cocktail do |c| -%>
-<%= c.input :name  %>
-<%= c.input :photo %>
-<%= c.input :photo_cache, as: :hidden %>
-<%= c.association :ingredients %>
-<%= c.submit :save %>
-<% end -%>
+  <div class="new-banner">
+   <h1>Create A Cocktail 🍻</h1>
+ </div>
+ <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= simple_form_for @cocktail do |c| -%>
+      <strong><%= c.input :name  %></strong>
+      <strong><%= c.input :photo %></strong>
+      <%= c.input :photo_cache, as: :hidden %>
+      <%= c.submit :save %>
+      <% end -%>
+    </div>
+  </div>
+</div>
 
