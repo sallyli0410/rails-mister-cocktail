@@ -1,6 +1,8 @@
 <h1>Create A Cocktail 🍸</h1>
 <%= simple_form_for @cocktail do |c| -%>
 <%= c.input :name  %>
+<%= c.input :photo %>
+<%= c.input :photo_cache, as: :hidden %>
 <%= c.association :ingredients %>
 <%= c.submit :save %>
 <% end -%>

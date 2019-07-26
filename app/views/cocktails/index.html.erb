@@ -1,5 +1,9 @@
-<h1>Cocktail List</h1>
-<%= link_to 'New Cocktail', new_cocktail_path  %>
-<% @cocktails.each  do |cocktail|  %>
-<%= cocktail.name %>
-<% end %>
+  <div class="home-banner">
+  <h1>Mrs.Cocktail 🍸</h1>
+  </div>
+  <h1>Cocktail List</h1>
+  <%= link_to 'New Cocktail', new_cocktail_path  %>
+  <% @cocktails.each  do |cocktail|  %>
+  <%= link_to cocktail.name, cocktail_path(cocktail) %>
+  <% end %>
+
